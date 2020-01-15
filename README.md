@@ -28,12 +28,12 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :comments
 
 ##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
+- has_many :comments
 - has_many :groups_users
 - has_many :users, through:  :groups_users
