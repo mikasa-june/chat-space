@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+// ここからサイド部分
+.side-bar {
+  height: 100vh;
+  width: 300px;
+  &__user-name {
+    background-color: #253141;
+    height: 100px;
+    position: relative;
+    .top-items{
+      height: 20px;
+      width: 260px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform : translate(-50%,-50%);
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        text-align: left;
+        font-size: 16px;
+        color: white;
+        line-height: 17px;
+      }
+      &__icons {
+        width: 60px;
+        line-height: 20px;
+        .icon-btn {
+          color: white;
+          float: right;
+          .btn-right {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__group-list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    .container {
+      width: 260px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      &__name {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      &__message {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 11px;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+
+// ここからメイン部分
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  position: relative;
+  &__group-info {
+    background-color: #ffffff;
+    height: 100px;
+    border-bottom: #eeeeee 1px solid;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      &__left{
+        margin-top: 35px;
+        margin-left: 40px;
+        .group-name {
+          color: #333333;
+          font-size: 20px;
+        }
+        .member-list {
+          color: #999999;
+          font-size: 12px;
+          margin-top: 15px;
+        }
+      }
+      &__btn{
+        display: flex;
+        width: 72px;
+        margin-right: 40px;
+        margin-top: 20px;
+        height: 40px;
+        align-items: center;
+        position: relative;
+        .edit-btn{
+          color: #38aef0;
+          font-size: 16px;
+          border: #38aef0 solid 1px;
+          text-decoration: none;
+          line-height: 40px;
+          padding-left: 20px;
+          padding-right: 20px;
+          position: absolute;
+          top: 7px;
+        }
+      }
+    }
+  }
+  &__message-list {
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+    padding-left: 40px;
+    padding-top:35px;
+    .message {
+      margin-bottom: 46px;
+      .user-info {
+        display: flex;
+        margin-bottom: 12px;
+        &-name {
+          color: #333333;
+          font-size: 16px;
+        }
+        .date {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &-text {
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+  }
+  &__message-form {
+    background-color: #d2d2d2;
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .container {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      .message-contanier {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        .textarea {
+          margin-left: 40px;
+          width: 100%;
+          .message {
+            margin-left: 10px;
+            padding-left: 10px;
+            height: 50px;
+            width: 100%;
+          }
+        }
+        .imagearea {
+          position: absolute;
+          right: 0px;
+          top: 13px;
+          input {
+            display: none;
+          }
+        }
+      }
+      .btn {
+        margin-right: 40px;
+        margin-left: 15px;
+        width: 100px;
+        height: 50px;
+        position: relative;
+        .send-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          text-decoration: none;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}

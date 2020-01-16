@@ -1,0 +1,40 @@
+.chat-main
+  .chat-main__group-info
+    .container
+      .container__left
+        .group-name
+          test
+        .member-list
+          Member : masa
+      .container__btn
+        =link_to "#", class: "edit-btn" do
+          Edit
+  .chat-main__message-list
+    .message
+      .user-info
+        .user-name
+          masa
+        .date
+          2019/11/20(wed) 17:43:01
+      .message-text
+        おはよう！
+    .message
+      .user-info
+        .user-name
+          masa
+        .date
+          2019/11/20(wed) 17:43:34
+      .message-text
+        今日は夜から雨
+  .chat-main__message-form
+    .container
+      .message-contanier
+        .textarea
+          %input{type: "text", placeholder: "type a message", class: "message"}
+        %label{class: "imagearea"}
+          = icon('fas', 'image')
+          %input{type: "file"}
+      .btn
+        =link_to "#", class: "send-btn" do
+          Send
+
