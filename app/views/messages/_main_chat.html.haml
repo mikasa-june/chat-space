@@ -3,9 +3,12 @@
     .container
       .container__left
         .group-name
-          テストグループネーム
+          -# 現在のグループ名を表示
+          =@group.name
         .member-list
-          Member : masa
+          -# 現在のグループに所属するユーザー名
+          -@group.users.each do |user|
+            = user.name
       .container__btn
         =link_to "#", class: "edit-btn" do
           Edit
