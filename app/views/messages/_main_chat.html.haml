@@ -3,14 +3,12 @@
     .container
       .container__left
         .group-name
-          -# 現在のグループ名を表示
           =@group.name
         .member-list
-          -# 現在のグループに所属するユーザー名
           -@group.users.each do |user|
             = user.name
       .container__btn
-        =link_to "#", class: "edit-btn" do
+        =link_to edit_group_path(@group.id), class: "edit-btn" do
           Edit
   .chat-main__message-list
     .messages
