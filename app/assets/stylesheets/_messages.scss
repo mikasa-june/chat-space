@@ -144,8 +144,8 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     position: relative;
     .container {
       display: flex;
@@ -154,26 +154,32 @@
       transform: translateY(-50%);
       width: 100%;
       .message-contanier {
-        display: flex;
-        justify-content: space-between;
         width: 100%;
-        position: relative;
-        .textarea {
-          margin-left: 40px;
+        .new_message {
+          display: flex;
+          justify-content: space-between;
           width: 100%;
-          .message {
-            margin-left: 10px;
-            padding-left: 10px;
-            height: 50px;
+          position: relative;
+          .textarea {
+            margin-left: 40px;
             width: 100%;
-          }
-        }
-        .imagearea {
-          position: absolute;
-          right: 0px;
-          top: 13px;
-          input {
-            display: none;
+            .message {
+              margin-left: 10px;
+              padding-left: 10px;
+              height: 50px;
+              width: 100%;
+            }
+            .imagearea {
+              position: absolute;
+              right: 135px;
+              top: 13px;
+              i {
+                cursor: pointer;
+              }
+              .hidden {
+                display: none;
+              }
+            }
           }
         }
       }
