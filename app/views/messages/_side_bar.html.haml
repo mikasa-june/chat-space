@@ -5,20 +5,22 @@
         = current_user.name
       %ul.top-items__icons
         %li.list
-        =link_to "#", class: "icon-btn" do
+        =link_to edit_user_path(current_user), class: "icon-btn" do
           =icon('fa', 'cog', class: "top-items__btn--icon btn-right")
           %span<>
         %li.list
-        =link_to edit_user_path(current_user), class: "icon-btn" do
+        =link_to new_group_path, class: "icon-btn" do
           =icon('fa', 'edit', class: "top-items__btn--icon")
           -# 'fa-cog'
           %span<>
 
   .side-bar__group-list
-    .container
-      .container__name
-        techchamp
-      .container__message
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .container
+        = link_to '#' do
+          .container__name
+            = group.name
+          .container__message
+            まだメッセージはありません
 
 
