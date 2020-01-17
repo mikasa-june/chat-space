@@ -15,10 +15,12 @@
           %span<>
 
   .side-bar__group-list
-    .container
-      .container__name
-        techchamp
-      .container__message
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .container
+        = link_to '#' do
+          .container__name
+            = group.name
+          .container__message
+            まだメッセージはありません
 
 
