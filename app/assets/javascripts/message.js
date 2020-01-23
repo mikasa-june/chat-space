@@ -135,16 +135,24 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      var insertHTML = '';
-      $.each(messages, function(i, message){
-        insertHTML += buildHTML(message)
-      });
-      // メッセージが入ったHTMLに、入れ物ごと追加
-      $('.messages').append(insertHTML);
+      if (messages.length !== 0){
+        var insertHTML = '';
+        $.each(messages, function(i, message){
+          insertHTML += buildHTML(message)
+        });
+        // メッセージが入ったHTMLに、入れ物ごと追加
+        $('.messages').append(insertHTML);
+        $(".chat-main__message-list").animete({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+        $("#new_message")[0].reset();
+        $(".form__submit").prop("disabled", false);
+      }
     })
     .fail(function() {
       console.log('error');
     });
     setInterval(reloadMessages, 7000);
+    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+      setInterval(reloadMessages, 7000);
+    }
   };
 });
