@@ -18,7 +18,7 @@
       .message-contanier
         = form_for [@group, @message] do |f|
           .textarea
-            = f.text_field :content, class: 'message', placeholder: 'type a message'
+            = f.text_field :content, class: 'message-area', placeholder: 'type a message'
             .imagearea 
               = f.label :image do
                 = icon('fas', 'image')

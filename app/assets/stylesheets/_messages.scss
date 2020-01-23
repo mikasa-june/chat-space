@@ -45,6 +45,7 @@
   &__group-list {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    overflow: scroll;
     .container {
       width: 260px;
       margin: 0 auto;
@@ -164,7 +165,7 @@
           .textarea {
             margin-left: 40px;
             width: 100%;
-            .message {
+            .message-area {
               margin-left: 10px;
               padding-left: 10px;
               height: 50px;
