@@ -71,15 +71,15 @@ $(function(){
     if (message.content && message.image) {
       //data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
+        `<div class="user-info">` +
+          `<div class="user-name">` +
             message.user_name +
           `</div>` +
-          `<div class="upper-message__date">` +
+          `<div class="date">` +
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="lower-message">` +
+        `<div class="message-text">` +
           `<p class="lower-message__content">` +
             message.content +
           `</p>` +
@@ -89,15 +89,15 @@ $(function(){
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
+        `<div class="user-info">` +
+          `<div class="user-name">` +
             message.user_name +
           `</div>` +
-          `<div class="upper-message__date">` +
+          `<div class="date">` +
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="lower-message">` +
+        `<div class="message-text">` +
           `<p class="lower-message__content">` +
             message.content +
           `</p>` +
@@ -106,15 +106,15 @@ $(function(){
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
+        `<div class="user-info">` +
+          `<div class="user-name">` +
             message.user_name +
           `</div>` +
-          `<div class="upper-message__date">` +
+          `<div class="date">` +
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="lower-message">` +
+        `<div class="lower-message__content">` +
           `<img src="` + message.image + `" class="lower-message__image" >` +
         `</div>` +
       `</div>`
