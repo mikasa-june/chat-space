@@ -1,9 +1,9 @@
 $(function(){
-  last_message_id = $('.message:last').data("message-id");
+  // last_message_id = $('.message:last').data("message-id");
   function buildHTML(message){
     if (message.image) {
       var html =
-      `<div class="message">
+      `<div class="message" data-message-id=${message.id}>
         <div class="user-info">
           <div class="user-name">
             ${message.user_name}
@@ -22,7 +22,7 @@ $(function(){
       return html;
     } else {
       var html =
-      `<div class="message">
+      `<div class="message"  data-message-id=${message.id}>
       <div class="user-info">
         <div class="user-name">
           ${message.user_name}
